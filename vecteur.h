@@ -2,7 +2,7 @@
 #ifndef VECTEUR_H
 #define VECTEUR_H
 
-#include "forme.h"
+#include <iostream>
 
 class Vecteur
 {

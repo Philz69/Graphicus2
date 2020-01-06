@@ -17,6 +17,8 @@ void Tests::tests_unitaires_formes()
 void Tests::tests_unitaires_vecteur()
 {
    // Tests sur la classe Vecteur
+   Vecteur vecteurTest;
+   printf("%i | %i", vecteurTest.getCapacity(), vecteurTest.getSize());
 }
 
 void Tests::tests_unitaires_couche()
