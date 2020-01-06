@@ -10,8 +10,8 @@
 #ifndef FORME_H
 #define FORME_H
 
-#include <iostream>
 #include "coordonnee.h"
+#include <iostream>
 
 using namespace std;
 
