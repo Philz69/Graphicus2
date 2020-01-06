@@ -18,7 +18,7 @@ void Tests::tests_unitaires_vecteur()
 {
    // Tests sur la classe Vecteur
    Vecteur vecteurTest;
-   printf("%i | %i", vecteurTest.getCapacity(), vecteurTest.getSize());
+   printf("%i | %i", vecteurTest.getSize(), vecteurTest.getCapacity());
 }
 
 void Tests::tests_unitaires_couche()
@@ -50,6 +50,7 @@ void Tests::tests_application()
 void Tests::tests_application_cas_01()
 {
    cout << "TESTS APPLICATION (CAS 01)" << endl; 
+   tests_unitaires();
    // Il faut ajouter les operations realisant ce scenario de test.
 }
 

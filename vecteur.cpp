@@ -7,6 +7,11 @@ Vecteur::Vecteur()
     capacity = 1; 
 }
 
+Vecteur::~Vecteur()
+{
+    delete formes;
+}
+
 int Vecteur::getCapacity()
 {
     return capacity;
