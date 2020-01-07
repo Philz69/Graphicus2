@@ -22,6 +22,6 @@ double Carre::aire()
 
 void Carre::afficher(ostream & s)
 {
-    s << "Cercle (x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << cote << ", aire=" << aire() << ")" << endl;
+    s << "Carre (x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << cote << ", aire=" << aire() << ")" << endl;
 }
 

@@ -16,7 +16,15 @@ void Tests::tests_unitaires_formes()
    rectangle1.setLargeur(15);
    rectangle1.translater(5,5);
    rectangle1.afficher(std::cout);
-   //printf("%i | %i | %i,%i\n", rectangle1.getHauteur(), rectangle1.getLargeur(), rectangle1.getAncrage().x, rectangle1.getAncrage().y);
+   Carre carre1;
+   carre1.setCote(7);
+   carre1.translater(7,7);
+   carre1.afficher(std::cout);
+   Cercle cercle1;
+   cercle1.setRayon(9);
+   cercle1.translater(9,9);
+   cercle1.afficher(std::cout);
+//printf("%i | %i | %i,%i\n", rectangle1.getHauteur(), rectangle1.getLargeur(), rectangle1.getAncrage().x, rectangle1.getAncrage().y);
    // Tests sur les formes geometriques
 }
 
