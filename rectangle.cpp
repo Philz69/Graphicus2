@@ -1,5 +1,9 @@
 #include "rectangle.h"
-
+Rectangle::Rectangle()
+{
+    hauteur = 0;
+    largeur = 0;
+}
 Rectangle::~Rectangle()
 {
 }

@@ -32,15 +32,22 @@ void Tests::tests_unitaires_vecteur()
 {
     // Tests sur la classe Vecteur
     Vecteur vecteurTest;
-    printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
+    //printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
     vecteurTest.doubleCapacity();
-    printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
-    for(int i = 0; i < 100; i++)
+    //printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
+    Rectangle rectangle1;
+    rectangle1.setHauteur(10);
+    rectangle1.setLargeur(15);
+    rectangle1.translater(5,5);
+
+    for(int i = 0; i < 1; i++)
     {
-        Rectangle rectangle1;
         vecteurTest.add(&rectangle1);
     }
-    printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
+    std::cout << vecteurTest.getSize() << endl;
+    //vecteurTest.get(0)->afficher(std::cout);
+    vecteurTest.afficher(std::cout);
+    //printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
 }
 
 void Tests::tests_unitaires_couche()
@@ -55,30 +62,22 @@ void Tests::tests_unitaires_couche()
     Cercle cercle1;
     Cercle* cerclePtr;
     cerclePtr = &cercle1;
-    int selector;
     for(int i = 0; i < 50; i++)
     {
-        selector = rand() % 3;
-            if(selector == 0)
-            {
-                rect1.setHauteur(rand());
-                rect1.setLargeur(rand());
-                rect1.translater(rand() % 10, rand() % 10);
-                couche1.addForme(rectPtr);
-            }
-            else if(selector == 1)
-            {
-                carre1.setCote(rand());
-                carre1.translater(rand() % 10, rand() % 10);
-                couche1.addForme(carrePtr); 
-            }
-            else
-            {
-                cercle1.setRayon(rand());
-                cercle1.translater(rand() % 10, rand() % 10);
-                couche1.addForme(cerclePtr);
-            }
-    }
+              rect1.setHauteur(rand() % 10);
+              rect1.setLargeur(rand() % 10);
+              rect1.translater(rand() % 10, rand() % 10);
+              couche1.addForme(rectPtr);
+            couche1.afficher(std::cout);
+            carre1.setCote(rand() % 10);
+            carre1.translater(rand() % 10, rand() % 10);
+            couche1.addForme(carrePtr); 
+            cercle1.setRayon(rand() % 10);
+            cercle1.translater(rand() % 10, rand() % 10);
+            couche1.addForme(cerclePtr);
+     }
+    //couche1.getForme(1)->afficher(std::cout);
+    couche1.afficher(std::cout);
     // Tests sur la classe Couche
 
 
@@ -100,7 +99,7 @@ void Tests::tests_unitaires()
 
 void Tests::tests_application()
 {
-    tests_unitaires();
+    tests_unitaires_canevas();
     // Fait tous les tests applicatifs
     tests_application_cas_01();
     tests_application_cas_02();

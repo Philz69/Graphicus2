@@ -54,8 +54,8 @@ bool Vecteur::add(Forme *forme)
     {
         capacity = doubleCapacity();
     } 
-    size++;
     formes[size] = forme; 
+    size++;
     return true;
 }
 

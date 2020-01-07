@@ -59,6 +59,7 @@ bool Couche::reset()
 bool Couche::changeState(int s)
 {
    state = s; 
+   return 1;
 } 
 void Couche::afficher(ostream &s)
 {
