@@ -12,15 +12,18 @@
 void Tests::tests_unitaires_formes()
 {
     Rectangle rectangle1;
+    rectangle1.afficher(std::cout);
     rectangle1.setHauteur(10);
     rectangle1.setLargeur(15);
     rectangle1.translater(5,5);
     rectangle1.afficher(std::cout);
     Carre carre1;
+    carre1.afficher(std::cout);
     carre1.setCote(7);
     carre1.translater(7,7);
     carre1.afficher(std::cout);
     Cercle cercle1;
+    cercle1.afficher(std::cout);
     cercle1.setRayon(9);
     cercle1.translater(9,9);
     cercle1.afficher(std::cout);
@@ -40,7 +43,7 @@ void Tests::tests_unitaires_vecteur()
     rectangle1.setLargeur(15);
     rectangle1.translater(5,5);
 
-    for(int i = 0; i < 1; i++)
+    for(int i = 0; i < 100; i++)
     {
         vecteurTest.add(&rectangle1);
     }
@@ -130,6 +133,7 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
+    tests_unitaires_formes();
     cout << "TESTS APPLICATION (CAS 01)" << endl; 
     // Il faut ajouter les operations realisant ce scenario de test.
 }

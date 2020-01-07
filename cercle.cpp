@@ -2,6 +2,11 @@
 
 #define PI 3.141598
 
+Cercle::Cercle()
+{
+    rayon = 0;
+}
+
 Cercle::~Cercle()
 {
 }

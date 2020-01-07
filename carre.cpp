@@ -2,6 +2,7 @@
 
 Carre::~Carre()
 {
+    cote = 0;
 }
 
 int Carre::getCote()
