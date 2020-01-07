@@ -2,7 +2,6 @@
 
 Rectangle::~Rectangle()
 {
-    printf("test");
 }
 
 int Rectangle::getHauteur()
@@ -24,3 +23,13 @@ void Rectangle::setLargeur(int l)
 {
     largeur = l;
 }
+
+double Rectangle::aire()
+{
+    return hauteur * largeur;
+}
+
+void Rectangle::afficher(ostream & s)
+{
+}
+

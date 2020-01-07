@@ -14,7 +14,7 @@ class Rectangle: public Forme
         void setLargeur(int l);
         double aire();
         void afficher(ostream & s);
-    protected:
+    private:
         int hauteur;
         int largeur;
 };

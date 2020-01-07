@@ -12,10 +12,10 @@
 void Tests::tests_unitaires_formes()
 {
    Rectangle rectangle1;
-   //rectangle1.setHauteur(10);
-   //rectangle1.setLargeur(15);
-   //rectangle1.translater(5,5);
-   //printf("%i | %i | %i,%i", rectangle1.getHauteur(), rectangle1.getLargeur(), rectangle1.getAncrage().x, rectangle1.getAncrage().y);
+   rectangle1.setHauteur(10);
+   rectangle1.setLargeur(15);
+   rectangle1.translater(5,5);
+   printf("%i | %i | %i,%i\n", rectangle1.getHauteur(), rectangle1.getLargeur(), rectangle1.getAncrage().x, rectangle1.getAncrage().y);
    // Tests sur les formes geometriques
 }
 
@@ -23,9 +23,15 @@ void Tests::tests_unitaires_vecteur()
 {
    // Tests sur la classe Vecteur
    Vecteur vecteurTest;
-   printf("%i | %i", vecteurTest.getSize(), vecteurTest.getCapacity());
+   printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
    vecteurTest.doubleCapacity();
-   printf("%i | %i", vecteurTest.getSize(), vecteurTest.getCapacity());
+   printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
+   for(int i = 0; i < 100; i++)
+   {
+       Rectangle rectangle1;
+       vecteurTest.add(&rectangle1);
+   }
+   printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
 }
 
 void Tests::tests_unitaires_couche()
@@ -49,6 +55,7 @@ void Tests::tests_unitaires()
 
 void Tests::tests_application()
 {
+   tests_unitaires();
    // Fait tous les tests applicatifs
    tests_application_cas_01();
    tests_application_cas_02();
