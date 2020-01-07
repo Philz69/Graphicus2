@@ -11,6 +11,11 @@
 
 void Tests::tests_unitaires_formes()
 {
+   Rectangle rectangle1;
+   //rectangle1.setHauteur(10);
+   //rectangle1.setLargeur(15);
+   //rectangle1.translater(5,5);
+   //printf("%i | %i | %i,%i", rectangle1.getHauteur(), rectangle1.getLargeur(), rectangle1.getAncrage().x, rectangle1.getAncrage().y);
    // Tests sur les formes geometriques
 }
 
@@ -52,7 +57,6 @@ void Tests::tests_application()
 void Tests::tests_application_cas_01()
 {
    cout << "TESTS APPLICATION (CAS 01)" << endl; 
-   tests_unitaires();
    // Il faut ajouter les operations realisant ce scenario de test.
 }
 
