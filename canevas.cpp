@@ -91,8 +91,10 @@ bool Canevas::translater(int deltaX, int deltaY)
 
 void Canevas::afficher(ostream & s)
 {
+
     for(int i = 0; i < MAX_COUCHES; i++)
     {
+        s << "----- Couche " << i << endl;
         couches[i].afficher(s);
     }
 }

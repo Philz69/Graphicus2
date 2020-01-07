@@ -64,10 +64,10 @@ void Tests::tests_unitaires_couche()
     cerclePtr = &cercle1;
     for(int i = 0; i < 50; i++)
     {
-              rect1.setHauteur(rand() % 10);
-              rect1.setLargeur(rand() % 10);
-              rect1.translater(rand() % 10, rand() % 10);
-              couche1.addForme(rectPtr);
+            rect1.setHauteur(rand() % 10);
+            rect1.setLargeur(rand() % 10);
+            rect1.translater(rand() % 10, rand() % 10);
+            couche1.addForme(rectPtr);
             couche1.afficher(std::cout);
             carre1.setCote(rand() % 10);
             carre1.translater(rand() % 10, rand() % 10);
@@ -85,6 +85,28 @@ void Tests::tests_unitaires_couche()
 
 void Tests::tests_unitaires_canevas()
 {
+   Canevas canevas1;
+       Rectangle rect1;
+       Cercle cercle1; 
+       Carre carre1;
+   for(int i =0;i< 5; i++)
+   {
+       canevas1.activerCouche(i);
+       rect1.setHauteur(rand() * i % 10);
+       rect1.setLargeur(rand() * i % 10);
+       rect1.translater(rand() * i % 10, rand() * i% 10);
+       canevas1.ajouterForme(&rect1);
+       carre1.setCote(rand() * i % 10);
+       carre1.translater(rand() * i % 10, rand() * i % 10);
+       canevas1.ajouterForme(&carre1); 
+       cercle1.setRayon(rand() * i % 10);
+       cercle1.translater(rand() * i % 10, rand() * i % 10);
+       canevas1.ajouterForme(&cercle1);
+   }
+   
+   canevas1.afficher(std::cout);
+   canevas1.cacherCouche(3);
+   canevas1.afficher(std::cout);
     // Tests sur la classe Canevas
 }
 
