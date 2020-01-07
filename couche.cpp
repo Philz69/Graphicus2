@@ -41,7 +41,7 @@ double Couche::getAire()
     return 1;
 }
 
-bool Couche::translation(int x, int y)
+bool Couche::translater(int x, int y)
 {
     for(int i = 0; i < formes.getSize(); i++)
     {
@@ -56,10 +56,15 @@ bool Couche::reset()
     return 1;
 }
 
-bool Couche::changeState(int s)
+bool Couche::setState(int s)
 {
    state = s; 
    return 1;
+} 
+
+int Couche::getState()
+{
+   return state;
 } 
 void Couche::afficher(ostream &s)
 {

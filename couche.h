@@ -26,9 +26,10 @@ class Couche
         Forme* removeForme(int index);
         Forme* getForme(int index);
         double getAire();
-        bool translation(int x, int y);
+        bool translater(int x, int y);
         bool reset();
-        bool changeState(int state);
+        bool setState(int state);
+        int getState();
         void afficher(ostream &s);
     private:
         int state;
