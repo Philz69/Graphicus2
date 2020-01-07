@@ -29,6 +29,7 @@ class Couche
         bool translation(int x, int y);
         bool reset();
         bool changeState(int state);
+        void afficher(ostream &s);
     private:
         int state;
         Vecteur formes;

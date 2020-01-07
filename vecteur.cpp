@@ -79,7 +79,11 @@ void Vecteur::empty()
     }
 }
 
-void Vecteur::output()
+void Vecteur::afficher(ostream &s)
 {
+    for(int i = 0; i < size; i++)
+    {
+        formes[i]->afficher(s);     
+    }
     return;
 }

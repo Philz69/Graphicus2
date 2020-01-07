@@ -17,8 +17,8 @@ class Vecteur
         Forme* del(int index);
         Forme* get(int index);
         void empty();
-        void output();
         int doubleCapacity();
+        void afficher(ostream &s);
     private:
         Forme** formes;
         int capacity;
