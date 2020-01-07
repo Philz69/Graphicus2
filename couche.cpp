@@ -9,6 +9,7 @@
 #include "couche.h"
 Couche::Couche()
 {
+    setState(INITIALISE);
 }
 
 Couche::~Couche()
@@ -68,6 +69,21 @@ int Couche::getState()
 } 
 void Couche::afficher(ostream &s)
 {
+    if(getState() == INITIALISE)
+    {
+        s << "Couche Initialise" << endl;
+    }
+    else if(getState() == CACHEE)
+    {
+        s << "Couche cachee" << endl;
+    }
+    else if(formes.isEmpty())
+    {
+        s << "Couche vide" << endl;
+    }
+    else
+    {
     formes.afficher(s);
+    }
 }
 

@@ -89,7 +89,7 @@ void Tests::tests_unitaires_canevas()
        Rectangle rect1;
        Cercle cercle1; 
        Carre carre1;
-   for(int i =0;i< 5; i++)
+   for(int i =0;i< 3; i++)
    {
        canevas1.activerCouche(i);
        rect1.setHauteur(rand() * i % 10);
@@ -105,7 +105,8 @@ void Tests::tests_unitaires_canevas()
    }
    
    canevas1.afficher(std::cout);
-   canevas1.cacherCouche(3);
+   canevas1.cacherCouche(1);
+   canevas1.activerCouche(4);
    canevas1.afficher(std::cout);
     // Tests sur la classe Canevas
 }

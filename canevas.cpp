@@ -25,7 +25,10 @@ bool Canevas::activerCouche(int index)
 {
     for(int i = 0; i < MAX_COUCHES; i++)
     {
+        if(couches[i].getState() == ACTIVE)
+        {
         couches[i].setState(INACTIVE);
+        }
     }
    couches[index].setState(ACTIVE); 
    return true;
