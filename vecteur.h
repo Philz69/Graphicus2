@@ -3,6 +3,7 @@
 #define VECTEUR_H
 
 #include <iostream>
+#include "forme.h"
 
 class Vecteur
 {
@@ -12,13 +13,14 @@ class Vecteur
         int getCapacity();
         int getSize(); 
         int isEmpty();
-        bool add(int *forme);
-        int* del(int index);
-        int* get(int index);
+        bool add(Forme *forme);
+        Forme* del(int index);
+        Forme* get(int index);
         void empty();
         void output();
+        int doubleCapacity();
     private:
-        int* formes;
+        Forme** formes;
         int capacity;
         int size;
 };

@@ -2,7 +2,7 @@
 
 Vecteur::Vecteur()
 {
-    formes = new int[1];    
+    formes = new Forme*[1];    
     size = 0;
     capacity = 1; 
 }
@@ -10,6 +10,20 @@ Vecteur::Vecteur()
 Vecteur::~Vecteur()
 {
     delete formes;
+}
+
+int Vecteur::doubleCapacity()
+{
+    capacity = capacity * 2;
+    Forme **tmp;
+    tmp = new Forme*[capacity];
+    for(int i = 0; i < size; i++)
+    {
+       tmp[i] = formes[i];
+    } 
+   delete formes;
+   formes = tmp;
+   return capacity;
 }
 
 int Vecteur::getCapacity()
@@ -34,24 +48,35 @@ int Vecteur::isEmpty()
     }
 }
 
-bool Vecteur::add(int *forme)
+bool Vecteur::add(Forme *forme)
 {
+    if(size == capacity)
+    {
+        capacity = doubleCapacity();
+    } 
+    size++;
+    formes[size] = forme; 
     return true;
 }
 
-int* Vecteur::del(int index)
+Forme* Vecteur::del(int index)
 {
-    return NULL;
+    Forme* tmp = formes[index];
+    formes[index] = NULL;
+    return tmp;
 }
 
-int* Vecteur::get(int index)
+Forme* Vecteur::get(int index)
 {
-    return NULL;
+    return formes[index];
 }
 
 void Vecteur::empty()
 {
-    return;
+    for(int i = 0; i < capacity; i++)
+    {
+        formes[i] = NULL;
+    }
 }
 
 void Vecteur::output()

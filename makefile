@@ -14,6 +14,6 @@ forme.o: coordonnee.h forme.h forme.cpp
 couche.o: couche.h couche.cpp
 	$(CC) -c couche.cpp
 
-vecteur.o: vecteur.h vecteur.cpp
+vecteur.o: forme.h vecteur.h vecteur.cpp
 	$(CC) -c vecteur.cpp
 	
