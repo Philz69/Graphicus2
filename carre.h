@@ -7,6 +7,7 @@
 class Carre: public Forme
 {
     public:
+        Carre();
         ~Carre();
         int getCote();
         void setCote(int c);

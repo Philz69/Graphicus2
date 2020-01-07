@@ -1,8 +1,12 @@
 #include "carre.h"
 
-Carre::~Carre()
+Carre::Carre()
 {
     cote = 0;
+}
+
+Carre::~Carre()
+{
 }
 
 int Carre::getCote()
