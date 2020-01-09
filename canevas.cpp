@@ -18,6 +18,10 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
+    for(int i =0; i < MAX_COUCHES; i++)
+    {
+        couches[i].reset();
+    }
    return true;
 }
 

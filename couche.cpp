@@ -62,6 +62,7 @@ bool Couche::reset()
     {
         return 0;
     }
+    setState(INITIALISE);
     return 1;
 }
 
