@@ -12,7 +12,7 @@ class Vecteur
         ~Vecteur();
         int getCapacity();
         int getSize(); 
-        int isEmpty();
+        bool isEmpty();
         bool add(Forme *forme);
         Forme* del(int index);
         Forme* get(int index);

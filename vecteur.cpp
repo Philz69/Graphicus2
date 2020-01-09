@@ -36,7 +36,7 @@ int Vecteur::getSize()
     return size;
 }
 
-int Vecteur::isEmpty()
+bool Vecteur::isEmpty()
 {
     if(size == 0)
     {
