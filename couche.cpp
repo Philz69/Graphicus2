@@ -34,7 +34,7 @@ Forme* Couche::getForme(int index)
 
 double Couche::getAire()
 {
-    double total;
+    double total = 0;
     for(int i = 0; i < formes.getSize(); i++)
     {
         total = total + formes.get(i)->aire();
@@ -44,6 +44,10 @@ double Couche::getAire()
 
 bool Couche::translater(int x, int y)
 {
+    if(formes.getSize() == 0)
+    {
+        return 0;
+    }
     for(int i = 0; i < formes.getSize(); i++)
     {
         formes.get(i)->translater(x, y);
@@ -54,6 +58,10 @@ bool Couche::translater(int x, int y)
 bool Couche::reset()
 {
     formes.empty();
+    if(!formes.isEmpty())
+    {
+        return 0;
+    }
     return 1;
 }
 
