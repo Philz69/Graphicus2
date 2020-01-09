@@ -19,7 +19,7 @@ Couche::~Couche()
 bool Couche::addForme(Forme* forme)
 {
     formes.add(forme);
-    return 1;
+    return true;
 }
 
 Forme* Couche::removeForme(int index)
@@ -39,20 +39,20 @@ double Couche::getAire()
     {
         total = total + formes.get(i)->aire();
     }
-    return 1;
+    return total;
 }
 
 bool Couche::translater(int x, int y)
 {
     if(formes.getSize() == 0)
     {
-        return 0;
+        return false;
     }
     for(int i = 0; i < formes.getSize(); i++)
     {
         formes.get(i)->translater(x, y);
     }
-    return 1;
+    return true;
 }
 
 bool Couche::reset()
@@ -60,22 +60,23 @@ bool Couche::reset()
     formes.empty();
     if(!formes.isEmpty())
     {
-        return 0;
+        return false;
     }
     setState(INITIALISE);
-    return 1;
+    return true;
 }
 
 bool Couche::setState(int s)
 {
    state = s; 
-   return 1;
+   return true;
 } 
 
 int Couche::getState()
 {
    return state;
 } 
+
 void Couche::afficher(ostream &s)
 {
     if(getState() == INITIALISE)
