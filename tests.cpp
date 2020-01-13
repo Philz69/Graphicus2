@@ -35,9 +35,6 @@ void Tests::tests_unitaires_vecteur()
 {
     // Tests sur la classe Vecteur
     Vecteur vecteurTest;
-    //printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
-    vecteurTest.doubleCapacity();
-    //printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
     Rectangle rectangle1;
     rectangle1.setHauteur(10);
     rectangle1.setLargeur(15);

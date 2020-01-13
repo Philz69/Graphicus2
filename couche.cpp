@@ -18,12 +18,20 @@ Couche::~Couche()
 
 bool Couche::addForme(Forme* forme)
 {
+    if(state != ACTIVE)
+    {
+        return false;
+    }
     formes.add(forme);
     return true;
 }
 
 Forme* Couche::removeForme(int index)
 {
+    if(state != ACTIVE)
+    {
+        return nullptr;
+    }
     return formes.del(index);
 }
 
@@ -51,6 +59,10 @@ bool Couche::translater(int x, int y)
     {
         return false;
     }
+    if(state != ACTIVE)
+    {
+        return false;
+    }
     for(int i = 0; i < formes.getSize(); i++)
     {
         formes.get(i)->translater(x, y);
@@ -71,6 +83,10 @@ bool Couche::reset()
 
 bool Couche::setState(int s)
 {
+    if(s == INITIALISE)
+    {
+        return false;
+    }
     state = s; 
     return true;
 } 

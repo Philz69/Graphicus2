@@ -27,60 +27,38 @@ bool Canevas::reinitialiser()
 
 bool Canevas::activerCouche(int index)
 {
-    for(int i = 0; i < MAX_COUCHES; i++)
-    {
-        if(couches[i].getState() == ACTIVE)
-        {
-        couches[i].setState(INACTIVE);
-        }
-    }
    couches[index].setState(ACTIVE); 
+   coucheactive = index;
    return true;
 }
 
 bool Canevas::cacherCouche(int index)
 {
+    if(couches[index].getState() == ACTIVE)
+    {
+        coucheactive = -1;
+    }
    couches[index].setState(CACHEE);
    return true;
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-   int indexActif = -1;
-    for(int i = 0; i < MAX_COUCHES; i++)
-    {
-        if(couches[i].getState() == ACTIVE)
-        {
-            indexActif = i;
-            break;
-        }
-  }
-
-   if(indexActif == -1)
+   if(coucheactive == -1)
       {
           return false;
       }
-   couches[indexActif].addForme(p_forme);
+   couches[coucheactive].addForme(p_forme);
    return true;
 }
 
 bool Canevas::retirerForme(int index)
 {
-   int indexActif = -1;
-    for(int i = 0; i < MAX_COUCHES; i++)
-    {
-        if(couches[i].getState() == ACTIVE)
-        {
-            indexActif = i;
-            break;
-        }
-  }
-
-   if(indexActif == -1)
+   if(coucheactive == -1)
       {
           return false;
       }
-   couches[indexActif].removeForme(index);
+   couches[coucheactive].removeForme(index);
    return true;
 }
 
@@ -96,22 +74,11 @@ double Canevas::aire()
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
-
-   int indexActif = -1;
-    for(int i = 0; i < MAX_COUCHES; i++)
-    {
-        if(couches[i].getState() == ACTIVE)
-        {
-            indexActif = i;
-            break;
-        }
-  }
-
-   if(indexActif == -1)
+   if(coucheactive == -1)
       {
           return false;
       }
-    couches[indexActif].translater(deltaX, deltaY);
+    couches[coucheactive].translater(deltaX, deltaY);
    return true;
 }
 
