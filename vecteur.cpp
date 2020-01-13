@@ -61,18 +61,27 @@ bool Vecteur::add(Forme *forme)
 
 Forme* Vecteur::del(int index)
 {
+    if(index >= size || index < 0)
+    {
+        return nullptr;
+    }
+
     Forme* tmp = formes[index];
     for(int i = index; i < size - 1; i++)
     {
         formes[i] = formes[i + 1];
     }
-    formes[getSize() - 1] = NULL;
+    formes[getSize() - 1] = nullptr;
     size = size - 1;
     return tmp;
 }
 
 Forme* Vecteur::get(int index)
 {
+    if(index >= size || index < 0)
+    {
+        return nullptr;
+    }
     return formes[index];
 }
 
@@ -81,7 +90,7 @@ void Vecteur::empty()
     for(int i = 0; i < size; i++)
     {
         delete formes[i];
-        formes[i] = NULL;
+        formes[i] = nullptr;
     }
     size = 0;
 }
