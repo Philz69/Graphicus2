@@ -2,8 +2,10 @@
 
 #define PI 3.141598
 
-Cercle::Cercle()
+Cercle::Cercle(int x, int y)
 {
+    ancrage.x = x;
+    ancrage.y = y;
     rayon = 0;
 }
 

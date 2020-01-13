@@ -7,7 +7,7 @@
 class Cercle: public Forme
 {
     public:
-        Cercle();
+        Cercle(int x = 0, int y = 0);
         ~Cercle();
         int getRayon();
         void setRayon(int r);

@@ -1,7 +1,9 @@
 #include "carre.h"
 
-Carre::Carre()
+Carre::Carre(int x, int y)
 {
+    ancrage.x = x;
+    ancrage.y = y;
     cote = 0;
 }
 

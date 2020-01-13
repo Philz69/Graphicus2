@@ -1,6 +1,8 @@
 #include "rectangle.h"
-Rectangle::Rectangle()
+Rectangle::Rectangle(int x, int y)
 {
+    ancrage.x = x;
+    ancrage.y = y;
     hauteur = 0;
     largeur = 0;
 }

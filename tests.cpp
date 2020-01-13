@@ -131,6 +131,13 @@ void Tests::tests_application()
     tests_application_cas_02();
 }
 
+void tests_validation()
+{
+    Canevas canevas1;
+    Rectangle rect1(0,0);
+}
+
+
 void Tests::tests_application_cas_01()
 {
     tests_unitaires_formes();

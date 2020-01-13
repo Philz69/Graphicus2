@@ -7,7 +7,7 @@
 class Rectangle: public Forme
 {
     public:
-        Rectangle();
+        Rectangle(int x = 0, int y = 0);
         ~Rectangle();
         int getHauteur();
         int getLargeur();
