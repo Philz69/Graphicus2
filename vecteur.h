@@ -17,10 +17,10 @@ class Vecteur
         Forme* del(int index);
         Forme* get(int index);
         void empty();
-        int doubleCapacity();
         void afficher(ostream &s);
     private:
         Forme** formes;
+        int doubleCapacity();
         int capacity;
         int size;
 };
