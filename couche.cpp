@@ -35,9 +35,12 @@ Forme* Couche::getForme(int index)
 double Couche::getAire()
 {
     double total = 0;
-    for(int i = 0; i < formes.getSize(); i++)
+    if(getState() != CACHEE)
     {
-        total = total + formes.get(i)->aire();
+        for(int i = 0; i < formes.getSize(); i++)
+        {
+            total = total + formes.get(i)->aire();
+        }
     }
     return total;
 }
@@ -68,13 +71,13 @@ bool Couche::reset()
 
 bool Couche::setState(int s)
 {
-   state = s; 
-   return true;
+    state = s; 
+    return true;
 } 
 
 int Couche::getState()
 {
-   return state;
+    return state;
 } 
 
 void Couche::afficher(ostream &s)
@@ -93,7 +96,7 @@ void Couche::afficher(ostream &s)
     }
     else
     {
-    formes.afficher(s);
+        formes.afficher(s);
     }
 }
 

@@ -13,6 +13,7 @@ int main()
 {
    Tests tests;
    
+   tests.tests_unitaires_couche();
    tests.tests_validation();
    return 0;
 }

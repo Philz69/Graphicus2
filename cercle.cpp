@@ -6,7 +6,7 @@ Cercle::Cercle(int x, int y)
 {
     ancrage.x = x;
     ancrage.y = y;
-    rayon = 0;
+    rayon = 1;
 }
 
 Cercle::~Cercle()
@@ -27,7 +27,7 @@ void Cercle::setRayon(int r)
 
 double Cercle::aire()
 {
-    return PI * rayon * 2;
+    return PI * rayon * rayon;
 }
 
 void Cercle::afficher(ostream & s)

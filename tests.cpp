@@ -71,7 +71,7 @@ void Tests::tests_unitaires_couche()
             rect1.setLargeur(rand() % 10);
             rect1.translater(rand() % 10, rand() % 10);
             couche1.addForme(rectPtr);
-            couche1.afficher(std::cout);
+            //couche1.afficher(std::cout);
             carre1.setCote(rand() % 10);
             carre1.translater(rand() % 10, rand() % 10);
             couche1.addForme(carrePtr); 
@@ -81,6 +81,7 @@ void Tests::tests_unitaires_couche()
      }
     //couche1.getForme(1)->afficher(std::cout);
     couche1.afficher(std::cout);
+    std::cout << "Aire couche: " << couche1.getAire() << endl;
     // Tests sur la classe Couche
 
 

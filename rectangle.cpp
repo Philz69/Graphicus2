@@ -3,8 +3,8 @@ Rectangle::Rectangle(int x, int y)
 {
     ancrage.x = x;
     ancrage.y = y;
-    hauteur = 0;
-    largeur = 0;
+    hauteur = 1;
+    largeur = 1;
 }
 Rectangle::~Rectangle()
 {

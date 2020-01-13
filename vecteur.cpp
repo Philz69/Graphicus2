@@ -62,7 +62,12 @@ bool Vecteur::add(Forme *forme)
 Forme* Vecteur::del(int index)
 {
     Forme* tmp = formes[index];
-    formes[index] = NULL;
+    for(int i = index; i < size - 1; i++)
+    {
+        formes[i] = formes[i + 1];
+    }
+    formes[getSize() - 1] = NULL;
+    size = size - 1;
     return tmp;
 }
 
@@ -77,13 +82,14 @@ void Vecteur::empty()
     {
         formes[i] = NULL;
     }
+    size = 0;
 }
 
 void Vecteur::afficher(ostream &s)
 {
     for(int i = 0; i < size; i++)
     {
-        formes[i]->afficher(s);     
+            formes[i]->afficher(s);     
     }
     return;
 }
