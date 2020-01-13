@@ -1,5 +1,5 @@
 CC=g++
-graphicus: canevas.o couche.o forme.o vecteur.o tests.o rectangle.o carre.o cercle.o
+graphicus: canevas.o couche.o forme.o vecteur.o tests.o rectangle.o carre.o cercle.o graphicus.cpp
 	$(CC) graphicus.cpp canevas.o tests.o couche.o forme.o vecteur.o rectangle.o carre.o cercle.o  -o graphicus 
 
 tests.o: canevas.o tests.h tests.cpp
@@ -25,3 +25,4 @@ carre.o: forme.o carre.h carre.cpp
 
 cercle.o: forme.o cercle.h cercle.cpp
 	$(CC) -c cercle.cpp
+

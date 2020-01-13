@@ -78,7 +78,7 @@ bool Canevas::retirerForme(int index)
 
 double Canevas::aire()
 {
-    double total;
+    double total = 0;
     for(int i = 0; i < MAX_COUCHES; i++)
     {
         total = total + couches[i].getAire();

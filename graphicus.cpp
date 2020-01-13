@@ -13,7 +13,7 @@ int main()
 {
    Tests tests;
    
-   tests.tests_application();
+   tests.tests_validation();
    return 0;
 }
 

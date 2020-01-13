@@ -131,10 +131,77 @@ void Tests::tests_application()
     tests_application_cas_02();
 }
 
-void tests_validation()
+void Tests::tests_validation()
 {
     Canevas canevas1;
+    std::cout << "1: Activer couche 1" << endl;
+    canevas1.activerCouche(1);
+
+    std::cout << "2: Ajouter trois formes" << endl;
     Rectangle rect1(0,0);
+    Carre carre1(1,1);
+    Cercle cercle1(2,2);
+    canevas1.ajouterForme(&rect1);
+    canevas1.ajouterForme(&carre1);
+    canevas1.ajouterForme(&cercle1);
+
+
+    std::cout << "3: Activer couche 2" << endl;
+    canevas1.activerCouche(2);
+
+    std::cout << "4: Ajouter une forme" << endl;
+    Rectangle rect2(2,2);
+    canevas1.ajouterForme(&rect2); 
+
+    std::cout << "5: Afficher le canvas" << endl;
+    canevas1.afficher(std::cout);
+
+    std::cout << "6: Afficher l'aire du canvas" << endl;
+    std::cout << "Aire du canvas: " << canevas1.aire() << endl;
+
+    std::cout << "7: Activer couche 0" << endl;
+    canevas1.activerCouche(0);
+
+    std::cout << "8: ajouter trois formes" << endl;
+    Rectangle rect3(3,3);
+    Carre carre2(9,9);
+    Cercle cercle2(7,7);
+    canevas1.ajouterForme(&rect3);
+    canevas1.ajouterForme(&carre2);
+    canevas1.ajouterForme(&cercle2);
+
+    std::cout << "9: Cacher la couche 2" << endl;
+    canevas1.cacherCouche(2);
+
+    std::cout << "10: Activer la couche 1" << endl;
+    canevas1.activerCouche(1);
+
+    std::cout << "11: Translater la couche" << endl;
+    canevas1.translater(5,5);
+
+    std::cout << "12: Afficher le canvas" << endl;
+    canevas1.afficher(std::cout);
+
+    std::cout << "13: Afficher l'aire du canvas" << endl;
+    std::cout << "Aire du canvas: " << canevas1.aire() << endl;
+
+    std::cout << "14: Retirer la premiere forme de la couche" << endl;
+    canevas1.retirerForme(0);
+
+    std::cout << "15: Afficher le canvas" << endl;
+    canevas1.afficher(std::cout);
+
+    std::cout << "16: Afficher l'aire du canvas" << endl;
+    std::cout << "Aire du canvas: " << canevas1.aire() << endl;
+
+    std::cout << "17: Reinitialiser le canvas" << endl;
+    canevas1.reinitialiser();
+
+    std::cout << "18: Afficher le canvas" << endl;
+    canevas1.afficher(std::cout);
+
+    std::cout << "19: Afficher l'aire du canvas" << endl;
+    std::cout << "Aire du canvas: " << canevas1.aire() << endl;
 }
 
 
