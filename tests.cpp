@@ -175,8 +175,25 @@ void Tests::tests_validation()
     canevas1.ajouterForme(carre2);
     canevas1.ajouterForme(cercle2);
 
+
+    std::cout << "7.1: Afficher le canvas" << endl;
+    canevas1.afficher(std::cout);
+
+    std::cout << "7.2: Cacher la couche 0" << endl;
+    canevas1.cacherCouche(0);
+
+    std::cout << "7.3: Translater la couche" << endl;
+    canevas1.translater(5,5);
+
+    std::cout << "7.4: Cacher la couche 0" << endl;
+    canevas1.activerCouche(0);
+
+    std::cout << "7.5: Afficher le canvas" << endl;
+    canevas1.afficher(std::cout);
+
     std::cout << "9: Cacher la couche 2" << endl;
     canevas1.cacherCouche(2);
+
 
     std::cout << "10: Activer la couche 1" << endl;
     canevas1.activerCouche(1);
