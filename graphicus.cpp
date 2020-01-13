@@ -13,7 +13,11 @@ int main()
 {
    Tests tests;
    
+   std::cout << "---- Unitaire Vecteur" << endl;
+   tests.tests_unitaires_vecteur();
+   std::cout << "---- Unitaire Couche" << endl;
    tests.tests_unitaires_couche();
+   std::cout << "---- Valid" << endl;
    tests.tests_validation();
    return 0;
 }

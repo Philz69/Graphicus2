@@ -73,7 +73,7 @@ bool Canevas::retirerForme(int index)
   }
 
    couches[indexActif].removeForme(index);
- return true;
+   return true;
 }
 
 double Canevas::aire()

@@ -78,8 +78,9 @@ Forme* Vecteur::get(int index)
 
 void Vecteur::empty()
 {
-    for(int i = 0; i < capacity; i++)
+    for(int i = 0; i < size; i++)
     {
+        delete formes[i];
         formes[i] = NULL;
     }
     size = 0;

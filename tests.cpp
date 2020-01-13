@@ -43,13 +43,17 @@ void Tests::tests_unitaires_vecteur()
     rectangle1.setLargeur(15);
     rectangle1.translater(5,5);
 
-    for(int i = 0; i < 100; i++)
+    for(int i = 0; i < 10; i++)
     {
-        vecteurTest.add(&rectangle1);
+        Rectangle *rect = new Rectangle;
+        rect->setHauteur(10);
+        rect->setLargeur(10);
+        vecteurTest.add(rect);
     }
     std::cout << vecteurTest.getSize() << endl;
     //vecteurTest.get(0)->afficher(std::cout);
     vecteurTest.afficher(std::cout);
+    vecteurTest.empty();
     //printf("%i | %i \n", vecteurTest.getSize(), vecteurTest.getCapacity());
 }
 
@@ -90,22 +94,22 @@ void Tests::tests_unitaires_couche()
 void Tests::tests_unitaires_canevas()
 {
    Canevas canevas1;
-       Rectangle rect1;
-       Cercle cercle1; 
-       Carre carre1;
    for(int i =0;i< 3; i++)
    {
+       Rectangle* rect1 = new Rectangle;
+       Cercle *cercle1 = new Cercle; 
+       Carre *carre1 = new Carre;
        canevas1.activerCouche(i);
-       rect1.setHauteur(rand() * i % 10);
-       rect1.setLargeur(rand() * i % 10);
-       rect1.translater(rand() * i % 10, rand() * i% 10);
-       canevas1.ajouterForme(&rect1);
-       carre1.setCote(rand() * i % 10);
-       carre1.translater(rand() * i % 10, rand() * i % 10);
-       canevas1.ajouterForme(&carre1); 
-       cercle1.setRayon(rand() * i % 10);
-       cercle1.translater(rand() * i % 10, rand() * i % 10);
-       canevas1.ajouterForme(&cercle1);
+       rect1->setHauteur(rand() * i % 10);
+       rect1->setLargeur(rand() * i % 10);
+       rect1->translater(rand() * i % 10, rand() * i% 10);
+       canevas1.ajouterForme(rect1);
+       carre1->setCote(rand() * i % 10);
+       carre1->translater(rand() * i % 10, rand() * i % 10);
+       canevas1.ajouterForme(carre1); 
+       cercle1->setRayon(rand() * i % 10);
+       cercle1->translater(rand() * i % 10, rand() * i % 10);
+       canevas1.ajouterForme(cercle1);
    }
    
    canevas1.afficher(std::cout);
@@ -139,20 +143,20 @@ void Tests::tests_validation()
     canevas1.activerCouche(1);
 
     std::cout << "2: Ajouter trois formes" << endl;
-    Rectangle rect1(0,0);
-    Carre carre1(1,1);
-    Cercle cercle1(2,2);
-    canevas1.ajouterForme(&rect1);
-    canevas1.ajouterForme(&carre1);
-    canevas1.ajouterForme(&cercle1);
+    Rectangle *rect1 = new Rectangle(0,0);
+    Carre *carre1 = new Carre(1,1);
+    Cercle *cercle1 = new Cercle(2,2);
+    canevas1.ajouterForme(rect1);
+    canevas1.ajouterForme(carre1);
+    canevas1.ajouterForme(cercle1);
 
 
     std::cout << "3: Activer couche 2" << endl;
     canevas1.activerCouche(2);
 
     std::cout << "4: Ajouter une forme" << endl;
-    Rectangle rect2(2,2);
-    canevas1.ajouterForme(&rect2); 
+    Rectangle *rect2 = new Rectangle(2,2);
+    canevas1.ajouterForme(rect2); 
 
     std::cout << "5: Afficher le canvas" << endl;
     canevas1.afficher(std::cout);
@@ -164,12 +168,12 @@ void Tests::tests_validation()
     canevas1.activerCouche(0);
 
     std::cout << "8: ajouter trois formes" << endl;
-    Rectangle rect3(3,3);
-    Carre carre2(9,9);
-    Cercle cercle2(7,7);
-    canevas1.ajouterForme(&rect3);
-    canevas1.ajouterForme(&carre2);
-    canevas1.ajouterForme(&cercle2);
+    Rectangle *rect3 = new Rectangle(3,3);
+    Carre *carre2 = new Carre(9,9);
+    Cercle *cercle2 = new Cercle(7,7);
+    canevas1.ajouterForme(rect3);
+    canevas1.ajouterForme(carre2);
+    canevas1.ajouterForme(cercle2);
 
     std::cout << "9: Cacher la couche 2" << endl;
     canevas1.cacherCouche(2);
