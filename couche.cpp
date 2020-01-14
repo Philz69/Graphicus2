@@ -73,11 +73,11 @@ bool Couche::translater(int x, int y)
 bool Couche::reset()
 {
     formes.empty();
-    if(!formes.isEmpty())
-    {
-        return false;
-    }
-    setState(INITIALISE);
+    //if(!formes.isEmpty())
+    //{
+    //    return false;
+    //}
+    state = INITIALISE;
     return true;
 }
 
