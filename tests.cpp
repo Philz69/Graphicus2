@@ -211,13 +211,118 @@ void Tests::tests_validation()
 
 void Tests::tests_application_cas_01()
 {
-    tests_unitaires_formes();
     cout << "TESTS APPLICATION (CAS 01)" << endl; 
+
+    cout << "1: Créer un canevas" << endl; 
+    Canevas canevas1;
+
+    cout << "2: Afficher l'aire du canevas" << endl; 
+    cout << canevas1.aire() << endl;
+
+    cout << "3: Retirer une forme du canevas" << endl; 
+    canevas1.retirerForme(0);
+
+    cout << "4: Afficher le canevas" << endl; 
+    canevas1.afficher(std::cout);
+
+    cout << "5: Activer la couche 1" << endl; 
+    canevas1.activerCouche(1);
+
+    cout << "6: Ajouter deux formes" << endl; 
+    Rectangle* rect1 = new Rectangle;
+    Cercle* cercle1 = new Cercle;
+    rect1->setHauteur(4);
+    rect1->setLargeur(2);
+    canevas1.ajouterForme(rect1);
+    canevas1.ajouterForme(cercle1);
+   
+    cout << "7: Activer la couche 2" << endl;
+    canevas1.activerCouche(2);
+
+    cout << "8: Cacher la couche 2" << endl;
+    canevas1.cacherCouche(2);
+
+    cout << "9: Ajouter une forme" << endl;
+    Rectangle* rect2 = new Rectangle;
+    canevas1.ajouterForme(rect2);
+    
+
+    cout << "10: Afficher le canevas" << endl;
+    canevas1.afficher(std::cout);
+
+    cout << "11: Activer la couche 4" << endl;
+    canevas1.activerCouche(4);
+
+    cout << "12: Retirer la forme 2" << endl;
+    canevas1.retirerForme(2);
+
+    cout << "13: Affier l'air du canevas" << endl;
+    cout << canevas1.aire() << endl;
+    
+    
+    
+    
+    
     // Il faut ajouter les operations realisant ce scenario de test.
 }
 
 void Tests::tests_application_cas_02()
 {
     cout << "TESTS APPLICATION (CAS 02)" << endl;  
+    Canevas canevas1;
+
+    cout << "1: Activer la couche 1" << endl;
+    canevas1.activerCouche(1);
+
+    cout << "2: Ajouter un rectangle d'une hauteur de 2 et d'une largeur de 3";
+    Rectangle* rect1 = new Rectangle;
+    rect1->setHauteur(2);
+    rect1->setLargeur(3);
+
+    cout << "3: Activer la couche 2" << endl;
+    canevas1.activerCouche(2);
+    
+    cout << "4: Ajouter un cercle avec un rayon de 1 au point(5,6);" << endl;
+    Cercle* cercle1 = new Cercle(5,6);
+    canevas1.ajouterForme(cercle1);
+
+    cout << "5: Afficher le canevas" << endl;
+    canevas1.afficher(std::cout);
+
+    cout << "6: Afficher l'aire du canevas" << endl;
+    cout << canevas1.aire() << endl;
+
+    cout << "7:Activer la couche 1" << endl;
+    canevas1.activerCouche(1);
+
+    cout << "8: Ajouter un carré a l'origine" << endl;
+    Carre* carre1 = new Carre;
+    canevas1.ajouterForme(carre1); 
+
+    cout << "9: translater la couche 1 de 5 unités" << endl;
+    canevas1.translater(5,0);
+
+    cout << "10: Cacher la couche 2" << endl;
+    canevas1.cacherCouche(2);
+
+    cout << "11: Afficher le  canevas" << endl;
+    canevas1.afficher(std::cout);
+
+    cout << "12: Afficher l'air du canevas" << endl;
+    cout << canevas1.aire() << endl;
+
+    cout << "13: Retirer la deuxieme forme de la couche" << endl;
+    canevas1.retirerForme(2);
+
+    cout << "14: Afficher le  canevas" << endl;
+    canevas1.afficher(std::cout);
+
+    cout << "15: Afficher l'air du canevas" << endl;
+    cout << canevas1.aire() << endl;
+
+
+
+
+
     // Il faut ajouter les operations realisant ce scenario de test.
 }

@@ -1,0 +1,85 @@
+TESTS APPLICATION (CAS 01)
+1: Créer un canevas
+2: Afficher l'aire du canevas
+0
+3: Retirer une forme du canevas
+4: Afficher le canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Couche vide
+----- Couche 2
+Couche vide
+----- Couche 3
+Couche vide
+----- Couche 4
+Couche Initialise
+5: Activer la couche 1
+6: Ajouter deux formes
+7: Activer la couche 2
+8: Cacher la couche 2
+9: Ajouter une forme
+10: Afficher le canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Rectangle(x=0, y=0, l=2, h=4, aire=8)
+Cercle (x=0, y=0, r=1, aire=3.1416)
+----- Couche 2
+Couche cachee
+----- Couche 3
+Couche vide
+----- Couche 4
+Couche Initialise
+11: Activer la couche 4
+12: Retirer la forme 2
+13: Affier l'air du canevas
+11.1416
+TESTS APPLICATION (CAS 02)
+1: Activer la couche 1
+2: Ajouter un rectangle d'une hauteur de 2 et d'une largeur de 33: Activer la couche 2
+4: Ajouter un cercle avec un rayon de 1 au point(5,6);
+5: Afficher le canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Couche vide
+----- Couche 2
+Cercle (x=5, y=6, r=1, aire=3.1416)
+----- Couche 3
+Couche vide
+----- Couche 4
+Couche vide
+6: Afficher l'aire du canevas
+3.1416
+7:Activer la couche 1
+8: Ajouter un carré a l'origine
+9: translater la couche 1 de 5 unités
+10: Cacher la couche 2
+11: Afficher le  canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Carre (x=5, y=0, c=1, aire=1)
+----- Couche 2
+Couche cachee
+----- Couche 3
+Couche vide
+----- Couche 4
+Couche vide
+12: Afficher l'air du canevas
+1
+13: Retirer la deuxieme forme de la couche
+14: Afficher le  canevas
+----- Couche 0
+Couche vide
+----- Couche 1
+Carre (x=5, y=0, c=1, aire=1)
+----- Couche 2
+Couche cachee
+----- Couche 3
+Couche vide
+----- Couche 4
+Couche vide
+15: Afficher l'air du canevas
+1

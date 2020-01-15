@@ -12,7 +12,8 @@ using namespace std;
 int main()
 {
    Tests tests;
-   tests.tests_validation();
+   tests.tests_application_cas_01();
+   tests.tests_application_cas_02();
    return 0;
 }
 
