@@ -278,6 +278,7 @@ void Tests::tests_application_cas_02()
     Rectangle* rect1 = new Rectangle;
     rect1->setHauteur(2);
     rect1->setLargeur(3);
+    canevas1.ajouterForme(rect1);
 
     cout << "3: Activer la couche 2" << endl;
     canevas1.activerCouche(2);

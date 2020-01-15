@@ -43,7 +43,7 @@ TESTS APPLICATION (CAS 02)
 ----- Couche 0
 Couche vide
 ----- Couche 1
-Couche vide
+Rectangle(x=0, y=0, l=3, h=2, aire=6)
 ----- Couche 2
 Cercle (x=5, y=6, r=1, aire=3.1416)
 ----- Couche 3
@@ -51,7 +51,7 @@ Couche vide
 ----- Couche 4
 Couche vide
 6: Afficher l'aire du canevas
-3.1416
+9.1416
 7:Activer la couche 1
 8: Ajouter un carré a l'origine
 9: translater la couche 1 de 5 unités
@@ -60,6 +60,7 @@ Couche vide
 ----- Couche 0
 Couche vide
 ----- Couche 1
+Rectangle(x=5, y=0, l=3, h=2, aire=6)
 Carre (x=5, y=0, c=1, aire=1)
 ----- Couche 2
 Couche cachee
@@ -68,12 +69,13 @@ Couche vide
 ----- Couche 4
 Couche vide
 12: Afficher l'air du canevas
-1
+7
 13: Retirer la deuxieme forme de la couche
 14: Afficher le  canevas
 ----- Couche 0
 Couche vide
 ----- Couche 1
+Rectangle(x=5, y=0, l=3, h=2, aire=6)
 Carre (x=5, y=0, c=1, aire=1)
 ----- Couche 2
 Couche cachee
@@ -82,4 +84,4 @@ Couche vide
 ----- Couche 4
 Couche vide
 15: Afficher l'air du canevas
-1
+7
